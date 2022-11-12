@@ -1,0 +1,9 @@
+package com.navinreddy.springbootMVC;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.navinreddy.springbootMVC.Model.Alien;
+
+public interface AlienRepo extends JpaRepository<Alien,Integer> {
+
+}

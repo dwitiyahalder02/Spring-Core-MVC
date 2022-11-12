@@ -1,0 +1,6 @@
+package com.navinreddy.springbootMVC.dao;
+
+public class AlienDao {
+
+	
+}

@@ -1,0 +1,9 @@
+package com.navinreddy.springbootMVC;
+
+public class LoggingAspect {
+
+	public void log()
+	{
+		System.out.println("getaliens method called");
+	}
+}

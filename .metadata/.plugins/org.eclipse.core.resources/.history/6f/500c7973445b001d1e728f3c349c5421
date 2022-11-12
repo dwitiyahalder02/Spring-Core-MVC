@@ -1,0 +1,33 @@
+package com.navinreddy.springbootMVC;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.navinreddy.springbootMVC.Model.Alien;
+
+@Controller
+public class AlienController {
+	
+	@Autowired
+	AlienRepo repo;
+	
+	@GetMapping("/aliens")
+	@ResponseBody
+	public List<Alien> getAliens()
+	{
+		//List<Alien> aliens=Arrays.asList(new Alien(101,"diti"),new Alien(102,"sukanta"));
+		List<Alien> findAll = repo.findAll();
+		return findAll;
+	}
+	@GetMapping("/alien/102")
+	@ResponseBody
+	public Alien getAlien(int aid)
+	{
+		Alien alien=repo.getOne(aid);
+		return alien;
+	}
+}

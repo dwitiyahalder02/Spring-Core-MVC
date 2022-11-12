@@ -1,0 +1,11 @@
+
+//Type your code here
+//Type your code here
+//Type your code here
+
+@Configuration
+@ComponentScan("com.cts.SpringAopDemo")
+@EnableAspectJAutoProxy
+public class AopConfig {
+
+}

@@ -1,0 +1,5 @@
+package com.navinreddy.springbootMVC;
+
+public class AlienController {
+
+}

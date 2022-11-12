@@ -1,0 +1,23 @@
+package com.navinreddy.springbootMVC;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HomeController {
+
+	@RequestMapping("/home")
+	public String Home()
+	{
+		//System.out.println("home page requested");
+		return "index.jsp";
+	}
+	@RequestMapping("/add")
+	public String add(HttpServletRequest req)
+	{
+		int i=Integer.parseInt(req.getParameter(num1));
+		return "result.jsp";
+	}
+}
